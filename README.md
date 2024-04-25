@@ -10,6 +10,6 @@
 ## Table of Contents
 > * [Activities and Lessons](CSEL302_2B_HALLIG/ACTIVITY&LESSONS) 
 > * [Exercises](CSEL302_2B_HALLIG/EXERCISE) 
-> * [Midterms](CSEL302_2B_HALLIG/MIDTERM) 
+> * [Midterm](CSEL302_2B_HALLIG/MIDTERM) 
 
 ### Github Pages Link: 
