@@ -8,8 +8,8 @@
 > A compilation of my activities for the class code CSEL 302 - Intelligence Systems. CSEL 301 is a course focusing on the study of intelligence systems, likely covering topics related to artificial intelligence, machine learning, and cognitive science.
 
 ## Table of Contents
-> * Activities and Lessons
-> * Exercises
-> * Midterms
+> * [Activities and Lessons](CSEL302_2B_HALLIG/ACTIVITY&LESSONS) 
+> * [Exercises](CSEL302_2B_HALLIG/EXERCISE) 
+> * [Midterms](CSEL302_2B_HALLIG/MIDTERM) 
 
 ### Github Pages Link: 
