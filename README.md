@@ -12,4 +12,4 @@
 > * [Exercises](CSEL302_2B_HALLIG/EXERCISE) 
 > * [Midterm](CSEL302_2B_HALLIG/MIDTERM) 
 
-### Github Pages Link: 
+### Github Pages Link: https://sie-hanamura.github.io/CSEL302_Hallig/
