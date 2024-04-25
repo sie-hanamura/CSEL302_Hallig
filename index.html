@@ -58,13 +58,11 @@
       align-items: center;
     }
 
-    /* Show the button and apply AOS animation */
     #scrollToTopBtn.show-scroll-btn {
       opacity: 1;
       transition: opacity 0.3s ease-in-out;
     }
 
-    /* Additional style for AOS animation */
     #scrollToTopBtn[data-aos] {
       opacity: 0;
     }
@@ -136,7 +134,7 @@
         <main class="container">
           <section class="row mb-5" id="skills">
             <v-col cols="12" md="6">
-              <h1 class="primary--text" data-aos="fade-up">/Skills</h1>
+              <h1 class="primary--text" data-aos="fade-up">/Activity and Lessons</h1>
             </v-col>
             <v-col v-for="(skill, index) in skills" cols="12" :key="index">
               <v-card hover="hover" height="100%" data-aos="fade-up">
