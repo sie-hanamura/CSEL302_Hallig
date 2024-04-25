@@ -1,6 +1,15 @@
 # CSEL 302 Archives
-> A compilation of my activities for the class code CSEL 302 - Intelligence Systems.
 
-**• Student Name:** Siera Hallig<br>
-**• Class Code:** CSEL 302 | Intelligence Systems<br>
-**• Course & Academic Year:** BSCS 2B (2023-2024)<br>
+* **Student Name:** Siera Hallig<br>
+* **Class Code:** CSEL 302 | Intelligence Systems<br>
+* **Course & Academic Year:** BSCS 2B (2023-2024)<br>
+
+## Introduction
+> A compilation of my activities for the class code CSEL 302 - Intelligence Systems. CSEL 301 is a course focusing on the study of intelligence systems, likely covering topics related to artificial intelligence, machine learning, and cognitive science.
+
+## Table of Contents
+> * Activities and Lessons
+> * Exercises
+> * Midterms
+
+### Github Pages Link: 
