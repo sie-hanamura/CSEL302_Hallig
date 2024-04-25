@@ -1,71 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
 
-window.Config = {
-    name: 'CSEL 302',
-    skills: [
-      {
-        name: 'Assessment_Task__1.ipynb',
-        description: '/content/Email_Exchanges.csv',
-        git: 'https://github.com/sie-hanamura/CSEL302_Hallig/blob/main/CSEL302_2B_HALLIG/ACTIVITY%26LESSONS/Hallig_BSCS_2B_Assessment_Task_1.ipynb',
-       
-      },
-      {
-        name: 'Activity_2_Exploratory_Data_Analysis_of_Product_Data.ipynb',
-        description: '/content/sales_data_2.csv',
-        git: 'https://github.com/sie-hanamura/CSEL302_Hallig/blob/main/CSEL302_2B_HALLIG/ACTIVITY%26LESSONS/Hallig_BSCS_2B_Activity_2_Exploratory_Data_Analysis_of_Product_Data.ipynb',
-      },
-      {
-        name: 'Linear_Regression.ipynb',
-        description: 'Our first lesson on using Scikit-learn Linear Regression on Google Collab.',
-        git: 'https://github.com/sie-hanamura/CSEL302_Hallig/blob/main/CSEL302_2B_HALLIG/ACTIVITY%26LESSONS/Hallig_BSCS_2B_Linear_Regression.ipynb',
-      }
-    ],
-    works: [
-      {
-        name: 'EXER4.ipynb',
-        git: 'https://github.com/sie-hanamura/CSEL302_Hallig/blob/main/CSEL302_2B_HALLIG/EXERCISE/2B_HALLIG_EXER4.ipynb',
-        description: '/content/Lesson_4_student_grades_dataset 2.csv'
-      },
-      {
-        name: 'EXER5.ipynb',
-        git: 'https://github.com/sie-hanamura/CSEL302_Hallig/blob/main/CSEL302_2B_HALLIG/EXERCISE/2B_HALLIG_EXER5.ipynb',
-        description: '/content/BankCustomerData.csv'
-      },
-      {
-        name: 'EXER6.ipynb',
-        git: 'https://github.com/sie-hanamura/CSEL302_Hallig/blob/main/CSEL302_2B_HALLIG/EXERCISE/2B_HALLIG_EXER6.ipynb',
-        description: '/content/onlinefoods.csv'
-      },
-      {
-        name: 'EXER7.ipynb',
-        git: 'https://github.com/sie-hanamura/CSEL302_Hallig/blob/main/CSEL302_2B_HALLIG/EXERCISE/2B_HALLIG_EXER7.ipynb',
-        description: '/content/Netflix_Userbase.csv'
-      }
-    ],
-    
-    hobbies: [
-      {
-        name: 'Midterm',
-        description: '/content/bank_customers_train.csv',
-        git: 'https://github.com/sie-hanamura/CSEL302_Hallig/blob/main/CSEL302_2B_HALLIG/EXERCISE/2B_HALLIG_EXER7.ipynb',
-      }
-    ],
-    contacts: {
-      email: 'qsierahallig@gmail.com',
-      mobileNo: '+639674035726',
-      phoneNo: 'BSCS 2B',
-      links: [
-        {
-          name: 'GitHub',
-          link: 'https://github.com/sie-hanamura'
-        },
-        {
-          name: 'Facebook',
-          link: 'https://www.facebook.com/h3np1'
-        },
-        {
-          name: 'Discord',
-          link: 'https://discordapp.com/users/1121444450804191302/'
-        }
-      ]
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://postimg.cc/gwvwXh9n" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630">
+  <title>CSEL302 - Activity Compilation</title>
+  <link rel="icon" type="image/x-icon" href="img_previews\miku.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="manifest" href="./favicon_package_v0.16/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    #app {
+      background-color: black;
+      background-image: url("./cursor.gif");
+      background-repeat: no-repeat;
+      background-size: 50;
+      background-attachment: fixed;
+      background-position-x: -92px;
     }
-  };
+
+    #scrollToTopBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #19c113;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000;
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0; /* Initially hide the button */
+    }
+
+    #scrollToTopBtn i {
+      font-size: 20px;
+      line-height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Show the button and apply AOS animation */
+    #scrollToTopBtn.show-scroll-btn {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Additional style for AOS animation */
+    #scrollToTopBtn[data-aos] {
+      opacity: 0;
+    }
+
+    .v-application,
+    .v-application .body-1,
+    .v-application .body-2,
+    .v-application .caption,
+    .v-application .display-1,
+    .v-application .display-2,
+    .v-application .display-3,
+    .v-application .display-4,
+    .v-application .headline,
+    .v-application .overline,
+    .v-application .subtitle-1,
+    .v-application .subtitle-2,
+    .v-application .title {
+      font-family: 'Source Code Pro', monospace !important;
+    }
+
+    :-webkit-any(article, aside, nav, section) h1 {
+      font-size: 1.5em;
+      margin-block-start: 0.67em;
+      margin-block-end: 0.67em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  </style>
+  <script>
+    window.addEventListener('scroll', function() {
+      console.log("Scroll event triggered!"); // Add this line for debugging
+      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.classList.add("show-scroll-btn");
+      } else {
+        scrollToTopBtn.classList.remove("show-scroll-btn");
+      }
+    });
+
+    function scrollToTop() {
+      const scrollToTopBtn = document.documentElement;
+      scrollToTopBtn.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="scrollToTopBtn" @click="scrollToTop">
+      <i class="fa fa-arrow-up"></i>
+    </div>    
+    <v-app>
+      <header class="container" v-bind="sectionHeight">
+        <v-row>
+          <v-col cols="16" align="left" data-aos="fade-up">
+            <h1 class="display-4 primary--text">CSEL302</h1>
+            <h2 class="primary--text">Intelligence Systems | Siera Hallig | BSCS 2B</h2>
+            <p>A compilation of my activities for the class code CSEL 302 - Intelligence Systems. CSEL 302 is a course focusing on the study of intelligence systems, covering topics related to artificial intelligence, machine learning, and cognitive science.</p>
+            <nav>
+              <v-btn @click="scrollToSection('skills')" text="text" class="primary--text">/Activities and Lessons</v-btn>
+              <v-btn @click="scrollToSection('works')" text="text" class="primary--text">/Exercises</v-btn>
+              <v-btn @click="scrollToSection('midterms')" text="text" class="primary--text">/Midterm</v-btn>
+              <v-btn href="https://github.com/sie-hanamura/CSEL302_Hallig" target="_blank" text="text" class="primary--text" outlined="outlined">/Github Repositories</v-btn>
+            </nav>
+          </v-col>
+        </v-row>
+      </header>
+      <main class="container">
+        <main class="container">
+          <section class="row mb-5" id="skills">
+            <v-col cols="12" md="6">
+              <h1 class="primary--text" data-aos="fade-up">/Skills</h1>
+            </v-col>
+            <v-col v-for="(skill, index) in skills" cols="12" :key="index">
+              <v-card hover="hover" height="100%" data-aos="fade-up">
+                <v-card-text>
+                  <h2 class="primary--text">{{skill.name}}</h2>
+                  <br>
+                  <p>{{skill.description}}</p>
+                </v-card-text>
+                <img :src="skill.image" alt="Activity Thumbnail" style="max-width: 600px; max-height: 650px;
+                margin: 0 0 0 20px;">
+                <v-footer>
+                  <v-spacer></v-spacer>
+                  <a :href="githubLinks[index]" target="_blank">
+                    <i class="fa fa-github" style="font-size:24px;color:white"></i>
+                  </a>
+                </v-footer>                                   
+              </v-card>
+            </v-col>
+          </section>
+              
+          <section class="row mb-5" id="works">
+          <v-col cols="12" md="6">
+            <h1 class="primary--text" data-aos="fade-up">/Exercises</h1>
+          </v-col>
+          <v-col v-for="(work, index) in works" cols="12" :key="index">
+            <v-card hover="hover" height="100%" data-aos="fade-up">
+              <v-card-text>
+                <h2 class="primary--text">{{work.name}}</h2>
+                <br>
+                <p>{{work.description}}</p>
+              </v-card-text>
+              <img :src="work.image" alt="Exercise Thumbnail" style="max-width: 750px; max-height: 650px;
+              margin: 0 0 0 20px;">
+              <v-footer>
+                <v-spacer></v-spacer>
+                <a :href="work.git" target="_blank">
+                  <i class="fa fa-github" style="font-size:24px;color:white"></i>
+                </a>
+              </v-footer>
+            </v-card>
+          </v-col>
+        </section>
+
+          <section class="row mb-5" id="midterms">
+            <v-col cols="12" md="6">
+              <h1 class="primary--text" data-aos="fade-up">/Midterm</h1>
+            </v-col>
+            <v-col v-for="(midterm, index) in midterms" cols="12" :key="index">
+              <v-card hover="hover" height="100%" data-aos="fade-up">
+                <v-card-text>
+                  <h2 class="primary--text">{{midterm.name}}</h2>
+                  <br>
+                  <p><img src="img_previews\Midterm.png" alt="Midterm Notebook Preview" width="100%" height="100%"></p>
+                  <p>:{{midterm.description}}</p>  
+                </v-card-text>
+                <v-footer>
+                  <v-spacer></v-spacer>
+                  <a :href="midterm.git" target="_blank">
+                    <i class="fa fa-github" style="font-size:24px;color:white"></i>
+                  </a>
+                </v-footer>
+              </v-card>
+            </v-col>
+          </section>
+          
+          <section class="row justify-center" id="contact">
+            <v-col cols="12" md="10" class="text-center">
+              <h1 class="primary--text" data-aos="fade-up">/*Siera Q. Hallig*/</h1>
+            </v-col>
+            <v-col cols="12" sm="6" md="4" class="text-center">
+              <v-row>
+                <v-col class="text-center" cols="12" data-aos="fade-up">
+                  <h4 v-if="contacts && contacts.email">{{contacts.email}}</h4>
+                  <h4 v-if="contacts && contacts.mobileNo">{{contacts.mobileNo}}</h4>
+                  <h4 v-if="contacts && contacts.phoneNo">{{contacts.phoneNo}}</h4>
+                </v-col>
+                <v-col class="text-center" cols="12" data-aos="fade-up" gap-3>
+                  <v-btn class="ma-1" v-for="(link, index) in contactLinks" outlined="outlined" rounded="rounded" target="_blank" :href="link.link" :key="index" color="primary">
+                    {{link.name}}
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-col>
+          </section>
+        </main>
+        <footer class="v-footer v-sheet theme--dark" data-booted="true">
+          <v-spacer></v-spacer>
+          <small>Laguna State Polytechnic University Sta Cruz | A.Y: 2023 - 2024
+          </small>
+        </footer>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="config.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        vuetify: new Vuetify({
+          theme: {
+            dark: true,
+            themes: {
+              dark: {
+                primary: '#19c113',
+                secondary: '#424242',
+                accent: '#82B1FF',
+                error: '#FF5252',
+                info: '#2196F3',
+                success: '#4CAF50',
+                warning: '#FFC107'
+              }
+            }
+          }
+        }),
+        data() {
+          return {
+            menu: false, // Control the visibility of the button
+            ...window.Config
+          };
+        },
+        computed: {
+          $isMobile() {
+            return this.$vuetify.breakpoint.smAndDown;
+          },
+          sectionHeight() {
+            return {
+              style: 'min-height: 100vh',
+              class: 'fill-height'
+            };
+          },
+          contactLinks() {
+            if (this.contacts && this.contacts.links && this.contacts.links.length) {
+              return this.contacts.links;
+            }
+            return [];
+          },
+          githubLinks() {
+            const skillLinks = this.skills.map(skill => skill.git);
+            const workLinks = this.works.map(work => work.git);
+            return [...skillLinks, ...workLinks];
+          }
+        },
+        methods: {
+          scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+              window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth'
+              });
+
+            }
+          },
+          scrollToTop() {
+            const scrollToTopBtn = document.documentElement;
+            scrollToTopBtn.scrollIntoView({ behavior: 'smooth' });
+          },
+          toggleMenu() {
+            this.menu = !this.menu; // Toggle the menu data property
+          },
+          handleScroll() {
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (window.scrollY > 20) {
+              scrollToTopBtn.style.display = "block";
+            } else {
+              scrollToTopBtn.style.display = "none";
+            }
+          }
+        },
+        mounted() {
+          window.addEventListener('scroll', this.handleScroll);
+        },
+        beforeDestroy() {
+          window.removeEventListener('scroll', this.handleScroll);
+        }
+      });
+
+  AOS.init({
+    once: true,
+    delay: 0
+ });
+
+
+    </script>
+  </body>
+  </html>
