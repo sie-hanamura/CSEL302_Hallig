@@ -13,3 +13,4 @@
 > * [Midterm](CSEL302_2B_HALLIG/MIDTERM) 
 
 ### Github Pages Link: https://sie-hanamura.github.io/CSEL302_Hallig/
+![Screenshot 2024-08-26 010335](https://github.com/user-attachments/assets/b7631e9d-77d7-43cd-9dcf-1fb301f96741)
